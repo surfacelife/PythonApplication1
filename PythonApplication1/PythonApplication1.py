@@ -7,7 +7,7 @@ import datetime
 curversionlink = 'a36-7ecbac6055b0fd097177e43469d5d846.pck'
 curversion = "3.45"
 USERNAME = "jacob-f-larsen@hotmail.com"
-PASSWORD = "Nummer12"
+PASSWORD = "xxx"
 
 LOGIN_URL = "https://account.worxlandroid.com/login"
 URL = "https://account.worxlandroid.com/product-items/30173504170106010009"
@@ -85,7 +85,7 @@ def main():
         count += 1
         if count == 10 and link[8] != "s":
             print("Something is wrong!")
-            send_email('jakedotre@gmail.com', 'Jacob1995', adminrecipients, 'Buller - ERROR','Something is wrong! \nCount was 9 but link[8] was not "s"\nLink at count is: ' + link)
+            send_email('jakedotre@gmail.com', 'xx', adminrecipients, 'Buller - ERROR','Something is wrong! \nCount was 9 but link[8] was not "s"\nLink at count is: ' + link)
             
     for elem in soup.find_all(text = re.compile("Version")):
         string = soup.get_text()
@@ -101,7 +101,7 @@ def main():
         else:
             print("Possibly new update available")
             #
-            send_email('jakedotre@gmail.com','Jacob1995', recipients, 'Buller skal opdateres!', 'Buller skal nu opdateres! \nDownload opdateringen direkte fra: ' + linkarray[9] + ' \n\n(Guide til opdatering: https://www.worxlandroid.com/en/learn/software-upgrade-landroid-s/ ) \n\n\nHilsen Raspberry Pi' )
+            send_email('jakedotre@gmail.com','x', recipients, 'Buller skal opdateres!', 'Buller skal nu opdateres! \nDownload opdateringen direkte fra: ' + linkarray[9] + ' \n\n(Guide til opdatering: https://www.worxlandroid.com/en/learn/software-upgrade-landroid-s/ ) \n\n\nHilsen Raspberry Pi' )
             #with open("/home/pi/Public/landroid/log2.txt", "a") as logfile:
             #    logfile.write("New Update - " + str(datetime.date.today()) + "\n")
 
